@@ -1027,6 +1027,9 @@ a {
         padding: .5rem .75rem .5rem 1.25rem;
         color: var(--hmq-blue);
         background-color: var(--hmq-white);
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
     }
     .service-link-text {
         display: block;
