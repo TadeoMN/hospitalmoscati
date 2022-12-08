@@ -95,12 +95,9 @@
     <main class="container-fluid p-0">
         <div id="hmq-carousel-main" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-indicators hmq-carousel-indicators">
-                <button type="button" data-bs-target="#hmq-carousel-main" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#hmq-carousel-main" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#hmq-carousel-main" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#hmq-carousel-main" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#hmq-carousel-main" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#hmq-carousel-main" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="8000">
@@ -108,9 +105,9 @@
                         <div class="col-12 col-lg-7 hmq-carousel-main-container hmq-carousel-main-image-1">
                             <div class="d-flex flex-column justify-content-center h-100">
                                 <div class="hmq-carousel-title m-auto">
-                                    <h3>
+                                    <h2>
                                         Realiza tu preregistro
-                                    </h3>
+                                    </h2>
                                 </div>
                                 <div class="hmq-carousel-message m-auto">
                                     <p>
@@ -128,14 +125,15 @@
                         <div class="d-none d-lg-block col-md-5 p-0 hmq-carousel-image-1"></div>
                     </div>
                 </div>
+
                 <div class="carousel-item" data-bs-interval="8000">
                     <div class="row">
                         <div class="col-12 col-lg-7 hmq-carousel-main-container hmq-carousel-main-image-2">
                             <div class="d-flex flex-column justify-content-center h-100">
                                 <div class="hmq-carousel-title m-auto">
-                                    <h3>
+                                    <h2>
                                         maternidad moscati
-                                    </h3>
+                                    </h2>
                                 </div>
                                 <div class="hmq-carousel-message m-auto">
                                     <p>
@@ -157,9 +155,9 @@
                         <div class="col-12 col-lg-7 hmq-carousel-main-container hmq-carousel-main-image-3">
                             <div class="d-flex flex-column justify-content-center h-100">
                                 <div class="hmq-carousel-title m-auto">
-                                    <h3>
+                                    <h2>
                                         conoce a nuestros especialistas
-                                    </h3>
+                                    </h2>
                                 </div>
                                 <div class="hmq-carousel-message m-auto">
                                     <p>
@@ -184,9 +182,12 @@
     <!--CONTAINER PROMOTIONS-->
     <section class="container-fluid hmq-promo-container">
         <div class="d-flex justify-content-evenly align-items-center h-100">
-            <h2 class="hmq-promo-text">
-                ¡Descubre nuestras promociones del mes!
-            </h2>
+            <div class="hmq-promo-text">
+                <h2>
+                    ¡Descubre nuestras promociones del mes!
+                </h2>
+            </div>
+
             <div class="hmq-promo-btn">
                 <a href="promotions.html" class="hmq-btn-default">Ver más</a>
             </div>
@@ -196,21 +197,28 @@
 
     <!--CONTAINER MOSCATI-->
     <section class="container-fluid">
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-6 hmq-container-moscati">
-                <h1 class="text-uppercase text-center hmq-hospital-title">Hospital Moscati</h1>
-                <h3 class="hmq-hospital-slogan ">Excelencia y pasión por la vida</h3>
-                <p class=" hmq-hospital-text">
-                    Respaldados con una trayectoria de 30 años de brindar
-                    la mejor atención médica al estado, surge el Hospital Moscati,
-                    un hospital que cuenta con la tecnología, el equipo y los servicios
-                    necesarios para cuidar tu salud.
-                </p>
+        <div class="row hmq-row-default">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 hmq-moscati-container">
+                <div class="hmq-moscati-title">
+                    <h1>Hospital Moscati</h1>
+                </div>
+                <div class="hmq-moscati-slogan">
+                    <h3>Excelencia y pasión por la vida</h3>
+                </div>
+                <div class="hmq-moscati-txt">
+                    <p>
+                        Respaldados con una trayectoria de 30 años de brindar
+                        la mejor atención médica al estado, surge el Hospital Moscati,
+                        un hospital que cuenta con la tecnología, el equipo y los servicios
+                        necesarios para cuidar tu salud.
+                    </p>
+                </div>
+
                 <div class="hmq-carousel-btn text-center">
                     <a href="https://grupoebor.com.mx//maternidadrecorrido/index.html" class="hmq-btn-default"> Recorrido virtual</a>
                 </div>
             </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-6 hmq-image-moscati"></div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 hmq-moscati-image rounded-4"></div>
         </div>
     </section>
     <!--END CONTAINER MOSCATI-->
@@ -219,7 +227,7 @@
     <section class="container-fluid">
         <div class="row">
             <div class="col-12 hmq-insurers-title">
-                <h3 class="text-center">Trabajamos con las mejores aseguradoras</h3>
+                <h2>Trabajamos con las mejores aseguradoras</h2>
             </div>
             <div class="col-12 p-0">
                 <div class="hmq-slider">
@@ -256,19 +264,19 @@
     <!--END CONTAINER INSURERS-->
 
     <!--CONTAINER SERVICES-->
-    <section class="container">
-        <div class="hmq-services-text">
+    <section class="container-fluid">
+        <div class="hmq-our-services-title">
             <h2>Nuestros servicios</h2>
         </div>
-        <div class="hmq-grid-cards hmq-our-services">
+        <div class="hmq-our-service-grid hmq-our-services">
             <div class="hmq-box-shadow d-flex flex-column justify-content-between">
                 <div class="hmq-our-services-icon">
                     <i class="fa-solid fa-hospital"></i>
                 </div>
-                <div>
-                    <h4>Hospitalización</h4>
+                <div class="hmq-our-service-detail-title">
+                    <h3>Hospitalización</h3>
                 </div>
-                <div class="m-auto">
+                <div class="hmq-our-service-txt">
                     <p>
                         En el Hospital Moscati buscamos dar un trato cálido y amable a todos nuestros pacientes,
                         para ofrecerte el mejor servicio.
@@ -279,10 +287,10 @@
                 <div class="hmq-our-services-icon">
                     <i class="fa-solid fa-bed-pulse"></i>
                 </div>
-                <div>
-                    <h4>Terapia Intensiva</h4>
+                <div class="hmq-our-service-detail-title">
+                    <h3>Terapia Intensiva</h3>
                 </div>
-                <div class="m-auto">
+                <div class="hmq-our-service-txt">
                     <p>
                         El área de terapia intensiva ubicada en el piso 2 del Hospital Moscati es de alta
                         especialidad médica con equipos de última generación, únicos en el país.
@@ -293,10 +301,10 @@
                 <div class="hmq-our-services-icon">
                     <i class="fa-solid fa-laptop-medical"></i>
                 </div>
-                <div>
-                    <h4>Imagen</h4>
+                <div class="hmq-our-service-detail-title">
+                    <h3>Imagen</h3>
                 </div>
-                <div class="m-auto">
+                <div class="hmq-our-service-txt">
                     <p>
                         En el departamento de imagen del Hospital Moscati contamos con equipos de última
                         generación con el fin de obtener imágenes de alta resolución y realizar el
@@ -308,10 +316,10 @@
                 <div class="hmq-our-services-icon">
                     <i class="fa-solid fa-capsules"></i>
                 </div>
-                <div>
-                    <h4>Farmacia</h4>
+                <div class="hmq-our-service-detail-title">
+                    <h3>Farmacia</h3>
                 </div>
-                <div class="m-auto">
+                <div class="hmq-our-service-txt">
                     <p>
                         Te ofrece una amplia variedad de medicamentos de referencia, alta especialidad y
                         genéricos de laboratorios reconocidos.
@@ -322,10 +330,10 @@
                 <div class="hmq-our-services-icon">
                     <i class="fa-solid fa-microscope"></i>
                 </div>
-                <div>
-                    <h4>Laboratorio</h4>
+                <div class="hmq-our-service-detail-title">
+                    <h3>Laboratorio</h3>
                 </div>
-                <div class="m-auto">
+                <div class="hmq-our-service-txt">
                     <p>
                         El laboratorio de análisis clínicos del Hospital Moscati cuenta con equipo de última
                         generación el cual garantiza la validez y seguridad de los estudios
@@ -336,10 +344,10 @@
                 <div class="hmq-our-services-icon">
                     <i class="fa-solid fa-eye"></i>
                 </div>
-                <div>
-                    <h4>Óptica</h4>
+                <div class="hmq-our-service-detail-title">
+                    <h3>Óptica</h3>
                 </div>
-                <div class="m-auto">
+                <div class="hmq-our-service-txt">
                     <p>
                         En la Óptica del Hospital Moscati ubicada en la planta baja podrás encontrar las
                         mejores para el cuidado de tu salud visual.
@@ -350,10 +358,10 @@
                 <div class="hmq-our-services-icon">
                     <i class="fa-solid fa-heart-pulse"></i>
                 </div>
-                <div>
-                    <h4>Hemodinamia</h4>
+                <div class="hmq-our-service-detail-title">
+                    <h3>Hemodinamia</h3>
                 </div>
-                <div class="m-auto">
+                <div class="hmq-our-service-txt">
                     <p>
                         En el Hospital Moscati contamos con una sala de hemodinamia de última generación con
                         tecnología de vanguardia y personal especializado.
@@ -364,10 +372,10 @@
                 <div class="hmq-our-services-icon">
                     <i class="material-icons">emergency</i>
                 </div>
-                <div>
-                    <h4>Urgencias</h4>
+                <div class="hmq-our-service-detail-title">
+                    <h3>Urgencias</h3>
                 </div>
-                <div class="m-auto">
+                <div class="hmq-our-service-txt">
                     <p>
                         El departamento de urgencias cuenta con personal especializado las 24 horas del día
                         los 365 días del año.
@@ -378,16 +386,17 @@
                 <div class="hmq-our-services-icon">
                     <i class="fa-solid fa-mug-hot"></i>
                 </div>
-                <div>
-                    <h4>Cafetería</h4>
+                <div class="hmq-our-service-detail-title">
+                    <h3>Cafetería</h3>
                 </div>
-                <div class="m-auto">
+                <div class="hmq-our-service-txt">
                     <p>
-                        Cafetería Benevento ubicada en planta baja a un costado de la óptica.
-                        Nuestros horarios:
-                        Lunes a viernes 8:30 am - 19:00 pm.
-                        Sábado y domingo 8:30 am - 15:00 pm.
+                        Ubicada en planta baja a un costado de la óptica.
                     </p>
+                    <ul class="hmq-service-tap-pane-list">
+                        <li>Lunes a viernes 8:30 am - 19:00 pm.</li>
+                        <li>Sábado y Domingo 8:30 am - 15:00 pm.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -416,12 +425,12 @@
                             </a>
                         </li>
                         <li class="footer-item footer-expand">
-                            <a class="footer-link footer-expand-link" href="officesales.html">
+                            <a class="footer-link footer-expand-link" href="office-sales.html">
                                 Venta de consultorios
                             </a>
                         </li>
                         <li class="footer-item footer-expand">
-                            <a class="footer-link footer-expand-link" href="othersservices.html">
+                            <a class="footer-link footer-expand-link" href="others-services.html">
                                 Otros servicios
                             </a>
                         </li>
@@ -431,7 +440,7 @@
                             </a>
                         </li>
                         <li class="footer-item footer-expand">
-                            <a class="footer-link footer-expand-link" href="adviceprivacy.html">
+                            <a class="footer-link footer-expand-link" href="advice-privacy.html">
                                 Aviso de privacidad
                             </a>
                         </li>
