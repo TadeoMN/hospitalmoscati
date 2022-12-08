@@ -409,13 +409,13 @@ a {
     padding: var(--hmq-break-none) var(--hmq-break-none) var(--hmq-break-1) var(--hmq-break-none);
     background-color: var(--hmq-light-gray);
 }
-.hmq-list {
+.hmq-offcanvas-nav {
     display: block;
     padding: var(--hmq-break-1) var(--hmq-break-1) var(--hmq-break-1) calc(2 * var(--hmq-break-1));
     background-color: transparent;
     transition: color .35s ease-in-out, box-shadow .35s ease-in-out;
 }
-.hmq-list-item {
+.hmq-offcanvas-nav-item {
     font-size: 2rem;
     color: var(--hmq-blue-4);
     display: block;
@@ -423,10 +423,10 @@ a {
     letter-spacing: .325rem;
     font-weight: var(--hmq-weight-300);
 }
-.hmq-list:hover {
+.hmq-offcanvas-nav:hover {
     box-shadow: inset 36rem 0 0 0 var(--hmq-blue);
 }
-.hmq-list:hover .hmq-list-item {
+.hmq-offcanvas-nav:hover .hmq-offcanvas-nav-item {
     color: var(--hmq-white);
 }
 /*END OFFCANVAS BODY*/
@@ -913,168 +913,104 @@ a {
 }
 /*END CONTAINER SERVICES*/
 
-.hmq-service-select {
-    margin: .5rem 0;
+.hmq-service-pills {
+    margin: calc(.5 * var(--hmq-break-5)) var(--hmq-break-none);
+    padding: var(--hmq-break-5) var(--hmq-break-1);
     width: 100%;
-    height: 6rem;
-    padding: .5rem .375rem;
-    color: var(--hmq-blue);
-    background-color: var(--bs-white);
+    height: 6.5rem;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    color: var(--hmq-blue);
+    background-color: var(--hmq-white);
     border-bottom-right-radius: .375rem;
     border-top-right-radius: .375rem;
+    transition: color .35s ease-in-out, box-shadow .35s ease-in-out;
 }
-.hmq-service-select:hover{
-    color: var(--bs-white);
-    background-color: var(--hmq-blue-2);
+.hmq-service-pills:hover {
+    color: var(--hmq-white);
+    box-shadow: inset 36rem 0 0 0 var(--hmq-blue-1);
 }
-.hmq-service-select.active,
-.nav-pills .show>.hmq-service-select {
+.hmq-service-pills.active, .nav-pills .show>.hmq-service-pills {
     color: var(--hmq-white);
     background-color: var(--hmq-blue);
 }
-.service-icon i{
+.hmq-service-pills-icon i {
     font-size: 3rem;
 }
-.service-link-text {
+.hmq-service-pills-label label {
     display: none;
-    line-height: 1;
-    text-align: center;
-    letter-spacing: .0875rem;
-    font-size: 1.2rem;
-    font-weight: var(--hmq-weight-500);
-    margin: auto;
 }
-.service-container {
+.hmq-service-tab-pane {
     height: 80vh;
     overflow-x: hidden;
     overflow-y: scroll;
+    padding: var(--hmq-break-none);
 }
-.divider-service {
-    width: 85%;
-    opacity: .6;
-    margin: .175rem 0;
-    border-top: .15rem solid var(--hmq-blue);
-}
-.service-title {
-    margin-top: .5rem;
+.hmq-service-tab-pane-title {
+    color: var(--hmq-blue);
+    font-weight: var(--hmq-weight-500);
     text-align: center;
-    margin-bottom: .5rem;
-    letter-spacing: .2rem;
-    color: var(--hmq-blue);
     font-size: 2.6rem;
-    font-weight: var(--hmq-weight-500);
 }
-.service-text {
-    margin: 0;
-    padding: 0 1rem;
-    line-height: 2;
+.hmq-service-tap-pane-txt {
+    color: var(--hmq-gray-500);
+    font-weight: var(--hmq-weight-500);
     text-align: justify;
-    letter-spacing: .0875rem;
-    color: var(--hmq-blue);
     font-size: 1.4rem;
-    font-weight: var(--hmq-weight-500);
 }
-.service-list {
-    margin: 0;
-    padding: 0 4rem;
-    line-height: 2;
+.hmq-service-tap-pane-list {
+    color: var(--hmq-gray-500);
     text-align: justify;
-    letter-spacing: .0875rem;
-    color: var(--hmq-blue);
     font-size: 1.4rem;
     font-weight: var(--hmq-weight-500);
     list-style: circle;
 }
-.service-container::-webkit-scrollbar{
+
+.hmq-service-tab-pane::-webkit-scrollbar {
     -webkit-appearance: none;
 }
-.service-container::-webkit-scrollbar-thumb{
+.hmq-service-tab-pane::-webkit-scrollbar-thumb {
     border-radius: .75rem;
     border: .1rem solid var(--hmq-light-gray);
     background-color: var(--hmq-scrollbar);
 }
-.service-container::-webkit-scrollbar-track{
+.hmq-service-tab-pane::-webkit-scrollbar-track {
     border-radius: .75rem;
 }
-.service-container::-webkit-scrollbar:vertical{
+.hmq-service-tab-pane::-webkit-scrollbar:vertical {
     width: .95rem;
 }
-.service-container::-webkit-scrollbar:horizontal{
+.hmq-service-tab-pane::-webkit-scrollbar:horizontal {
     height: .95rem;
 }
-.service-container::-webkit-scrollbar-button:increment, .body::-webkit-scrollbar-button{
+.hmq-service-tab-pane::-webkit-scrollbar-button:increment, .body::-webkit-scrollbar-button {
     display: none;
 }
 @media (min-width: 576px) {
-    .service-title {
-        font-size: 3rem;
-    }
-    .service-text {
-        padding: 0 2rem;
-        font-size: 1.6rem;
-    }
-    .service-list {
-        padding: 0 5rem;
-        font-size: 1.6rem;
-    }
+
 }
 @media (min-width: 768px) {
-    .hmq-service-select {
-        padding: .5rem .75rem .5rem 1.25rem;
-        color: var(--hmq-blue);
-        background-color: var(--hmq-white);
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .service-link-text {
-        display: block;
-        line-height: 1;
-        text-align: center;
-        letter-spacing: .0875rem;
-        font-size: 1.4rem;
-        font-weight: var(--hmq-weight-500);
-    }
-    .service-title {
-        font-size: 3.4rem;
-        letter-spacing: .4rem;
-    }
+
 }
 @media (min-width: 992px) {
-    .service-title {
-        font-size: 4rem;
+    .hmq-service-pills {
+        justify-content: space-between;
     }
-    .service-text {
-        padding: 0 5rem;
-        letter-spacing: .1875rem;
-    }
-    .service-list {
-        padding: 0 8rem;
-        letter-spacing: .1875rem;
+    .hmq-service-pills-label label {
+        display: block;
+        text-align: center;
+        letter-spacing: .25rem;
+        font-size: 1.6rem;
+        font-weight: var(--hmq-weight-500);
     }
 }
 @media (min-width: 1200px) {
-    .service-title {
-        letter-spacing: .5rem;
-    }
-    .service-list {
-        padding: 0 10rem;
-    }
+
 }
 @media (min-width: 1400px) {
-    .service-title {
-        font-size: 5rem;
-    }
-    .service-text {
-        padding: 0 12rem;
-    }
-    .service-list {
-        padding: 0 15rem;
-    }
+
 }
 
 .hmq-container-default {
