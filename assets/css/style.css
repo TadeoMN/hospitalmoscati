@@ -116,7 +116,7 @@ body {
     padding: var(--hmq-break-none);
     color: var(--hmq-gray-700);
     font-family: var(--hmq-primary-font);
-    background-color: var(--hmq-light-gray);
+    background-color: var(--hmq-white);
 }
 body::-webkit-scrollbar{
     -webkit-appearance: none;
@@ -633,7 +633,7 @@ a {
 .hmq-moscati-image {
     min-height: 40rem;
     padding: var(--hmq-break-none);
-    background: url("../image/main/Hospital_moscati.jpg") center center;
+    background: url("../image/Hospital_moscati_2.jpeg") center center;
     background-size: cover;
 }
 @media (min-width: 576px) {
@@ -768,51 +768,51 @@ a {
 /*CONTAINER SERVICES*/
 .hmq-our-service-grid {
     margin: var(--hmq-break-none) auto;
-    max-width: 130rem;
+    padding: var(--hmq-break-none) var(--hmq-break-none) calc(2 * var(--hmq-break-15)) var(--hmq-break-none);
+    max-width: 105rem;
     display: grid;
     grid-gap: 1.5rem;
+    justify-items: center;
 }
 .hmq-our-services-title h2 {
     color: var(--hmq-blue-4);
     font-size: 3.4rem;
-    margin: var(--hmq-break-15) var(--hmq-break-none) var(--hmq-break-none) var(--hmq-break-none);
+    margin: var(--hmq-break-15) var(--hmq-break-none);
 }
-.hmq-our-services {
-    padding: calc(2 * var(--hmq-break-1)) calc(5.5 * var(--hmq-break-1));
-}
-.hmq-our-services .hmq-our-services-icon {
-    margin: calc(-6 * var(--hmq-break-1)) auto var(--hmq-break-1);
-    padding: var(--hmq-break-none);
-    width: 10rem;
-    height: 10rem;
+.hmq-our-services-icon {
+    margin: var(--hmq-break-1) auto var(--hmq-break-1);
     display: flex;
     justify-content: center;
     align-content: center;
     border-radius: 50%;
-    background-color: var(--hmq-light-gray);
+    background-color: var(--hmq-blue);
+    width: 12rem;
+    height: 12rem;
 }
-.hmq-our-services .hmq-our-services-icon i {
+.hmq-our-services-icon i {
     margin: auto;
-    font-size: 5rem;
-    color: var(--hmq-blue-4);
+    font-size: 6rem;
+    color: var(--hmq-white);
 }
-.hmq-our-services .hmq-box-shadow {
-    margin: calc(2 * var(--hmq-break-1)) var(--hmq-break-none);
-    padding: var(--hmq-break-15);
-    float: right;
-    min-height: 35rem;
-    max-height: 35rem;
+.hmq-box-shadow {
+    margin: calc(1 * var(--hmq-break-1)) var(--hmq-break-none);
+    padding: var(--hmq-break-1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 35rem;
+    width: 30rem;
     border-radius: 5%;
-    background-color: var(--hmq-light-gray);
-    box-shadow: 0 0 .5rem 0 var(--hmq-gray-500);
+    background-color: var(--hmq-white);
+    box-shadow: 0 0 .75rem 0 var(--hmq-gray-800);
 }
-.hmq-our-services .hmq-box-shadow:hover {
-    box-shadow: 0 0 1rem 0 var(--hmq-gray-800);
+.hmq-box-shadow:hover {
+    box-shadow: 0 0 1.75rem 0 var(--hmq-blue-1);
 }
 .hmq-our-service-detail-title h3 {
     margin: var(--hmq-break-none);
     color: var(--hmq-blue-4);
-    font-size: 3rem;
+    font-size: 3.4rem;
 }
 .hmq-our-service-txt {
     margin: auto;
@@ -838,6 +838,80 @@ a {
 @media (min-width: 1400px) {
 }
 /*END CONTAINER SERVICES*/
+
+.hmq-opinions-grid {
+    margin: var(--hmq-break-none) auto;
+    padding: var(--hmq-break-none) var(--hmq-break-none) calc(2 * var(--hmq-break-15)) var(--hmq-break-none);
+    max-width: 110rem;
+    display: grid;
+    grid-gap: 1.5rem;
+    justify-items: center;
+}
+.hmq-opinion-icon {
+    margin: var(--hmq-break-1) auto var(--hmq-break-1);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-radius: 50%;
+    background-color: var(--hmq-blue);
+    width: 12.5rem;
+    height: 12.5rem;
+}
+.hmq-opinion-img {
+    margin: auto;
+    width: 12rem;
+    height: 12rem;
+}
+.hmq-box-shadow-opinions {
+    margin: calc(1 * var(--hmq-break-1)) var(--hmq-break-none);
+    padding: var(--hmq-break-1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40rem;
+    width: 35rem;
+    border-radius: 5%;
+    background-color: var(--hmq-white);
+    box-shadow: 0 0 .75rem 0 var(--hmq-gray-800);
+}
+.hmq-box-shadow-opinions:hover {
+    box-shadow: 0 0 1.75rem 0 var(--hmq-blue-1);
+}
+.hmq-opinion-detail-title h4 {
+    margin: var(--hmq-break-none);
+    color: var(--hmq-blue-4);
+    font-size: 3rem;
+}
+.hmq-opinion-detail-txt {
+    margin: auto;
+}
+.hmq-opinion-detail-txt p {
+    margin: auto;
+    line-height: 1.5;
+    padding: var(--hmq-break-1) var(--hmq-break-1) calc(2 * var(--hmq-break-15)) var(--hmq-break-1);
+}
+@media (min-width: 576px) {
+
+}
+@media (min-width: 768px) {
+    .hmq-opinions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 992px) {
+    .hmq-opinions-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .hmq-our-services-title h2 {
+        font-size: 4.4rem;
+    }
+}
+@media (min-width: 1200px) {
+
+}
+@media (min-width: 1400px) {
+
+}
 
 .hmq-service-pills {
     margin: calc(.5 * var(--hmq-break-5)) var(--hmq-break-none);
