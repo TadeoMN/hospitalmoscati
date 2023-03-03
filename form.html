@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <!--META TAGS-->
+    <meta name="description"
+          content="Respaldados con una trayectoria de 30 años en brindar la mejor atención médica,
+          contamos con la tecnología, el equipo y los servicios necesarios para cuidar tu salud">
+    <meta name="keywords"
+          content="Hospital Moscati, Hospital, Moscati, Hospital En Querétaro">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#002554">
+    <!--END META TAGS-->
+
+    <!--STYLE SHEETS AND IMPORTS-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--END STYLE SHEETS AND IMPORTS-->
+
+    <!--SITE MAIN SETTINGS-->
+    <title>Hospital Moscati</title>
+    <link rel="icon" href="assets/image/logotipos/Favicon_48.png" media="(prefers-color-scheme:no-preference)" type="image/x-icon">
+    <link rel="icon" href="assets/image/logotipos/Favicon_48b.png" media="(prefers-color-scheme:dark)" type="image/x-icon">
+    <link rel="icon" href="assets/image/logotipos/Favicon_48.png" media="(prefers-color-scheme:light)" type="image/x-icon">
+    <!--END SITE MAIN SETTINGS-->
+</head>
+<body>
+    <!--CONTAINER NAVBAR-->
+    <header class="sticky-top">
+        <nav class="navbar bg-white">
+            <div class="container-fluid hmq-container-navbar">
+                <button class="hmq-navbar-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#hmq-navbar"
+                        aria-controls="offcanvasExample" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <a class="hmq-navbar-logo" href="index.html" aria-label="Moscati Home">
+                    <img class="hmq-navbar-logo-img" src="assets/image/logotipos/logo_350x75.png" alt="Logo Hospital Moscati">
+                </a>
+                <ul class="hmq-animation-phone" data-animation="to-left">
+                    <li>
+                        <a href="tel:4421893660" aria-label="Contact Phone">
+                            <span><i class="fa-solid fa-phone-flip" aria-hidden="true"></i></span>
+                            <span>4421893660</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="offcanvas offcanvas-start hmq-offcanvas" tabindex="-1" id="hmq-navbar" aria-labelledby="hmq-navbar">
+                    <div class="offcanvas-header hmq-offcanvas-header">
+                        <a class="hmq-offcanvas-logo" href="index.html">
+                            <img class="hmq-navbar-logo-img" src="assets/image/logotipos/logo_350x75.png" alt="Logo Hospital Moscati">
+                        </a>
+                        <button type="button" class="btn-close text-reset hmq-close-btn" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body hmq-offcanvas-body">
+                        <div>
+                            <ul>
+                                <li class="hmq-offcanvas-nav">
+                                    <a href="promotions.html" class="hmq-offcanvas-nav-item">Promociones</a>
+                                </li>
+                                <li class="hmq-offcanvas-nav">
+                                    <a href="services.html" class="hmq-offcanvas-nav-item">Servicios</a>
+                                </li>
+                                <li class="hmq-offcanvas-nav">
+                                    <a href="maternity.html" class="hmq-offcanvas-nav-item">Maternidad</a>
+                                </li>
+                                <li class="hmq-offcanvas-nav">
+                                    <a href="image.html" class="hmq-offcanvas-nav-item">Imagen</a>
+                                </li>
+                                <li class="hmq-offcanvas-nav">
+                                    <a href="laboratory.html" class="hmq-offcanvas-nav-item">Laboratorio</a>
+                                </li>
+                                <li class="hmq-offcanvas-nav">
+                                    <a href="surgeries.html" class="hmq-offcanvas-nav-item">Cirugías</a>
+                                </li>
+                                <li class="hmq-offcanvas-nav">
+                                    <a href="therapies.html" class="hmq-offcanvas-nav-item">Terapias</a>
+                                </li>
+                                <li class="hmq-offcanvas-nav">
+                                    <a href="insurers.html" class="hmq-offcanvas-nav-item">Aseguradoras</a>
+                                </li>
+                                <li class="hmq-offcanvas-nav">
+                                    <a href="https://grupoebor.com.mx//maternidadrecorrido/index.html" class="hmq-offcanvas-nav-item">Recorrido virtual</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--END CONTAINER NAVBAR-->
+
+    <section class="container my-5">
+        <form>
+            <div class="form-group">
+                <label for="firstName">Apellido paterno*</label>
+                <input type="text" class="form-control" id="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Apellido materno</label>
+                <input type="text" class="form-control" id="lastName">
+            </div>
+            <div class="form-group">
+                <label for="name">Nombre*</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="identificationType">Tipo de identificación*</label>
+                <select class="form-control" id="identificationType" required>
+                    <option>INE</option>
+                    <option>Pasaporte</option>
+                    <option>Licencia de conducir</option>
+                    <option>Cartilla militar</option>
+                    <option>CURP</option>
+                    <option>Credencial escolar</option>
+                    <option>Cédula profesional</option>
+                    <option>INAPAM</option>
+                    <option>Documento migratorio</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="gender">Género*</label>
+                <select class="form-control" id="gender" required>
+                    <option>Masculino</option>
+                    <option>Femenino</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="birthdate">Fecha de nacimiento*</label>
+                <input type="date" class="form-control" id="birthdate" required>
+            </div>
+            <div class="form-group">
+                <label for="bloodType">Tipo de sangre*</label>
+                <select class="form-control" id="bloodType" required>
+                    <option>N/A</option>
+                    <option>A+</option>
+                    <option>B+</option>
+                    <option>AB+</option>
+                    <option>O+</option>
+                    <option>A-</option>
+                    <option>B-</option>
+                    <option>AB-</option>
+                    <option>O-</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="estado">Estado*</label>
+                <select class="form-control" id="estado" required>
+                    <option>Aguascalientes</option>
+                    <option>Baja California Norte</option>
+                    <option>Baja California Sur</option>
+                    <option>Campeche</option>
+                    <option>Chiapas</option>
+                    <option>Chihuahua</option>
+                    <option>Ciudad de México</option>
+                    <option>Coahuila</option>
+                    <option>Colima</option>
+                    <option>Durango</option>
+                    <option>Opción 10</option>
+                    <option>Guanajuato</option>
+                    <option>Guerrero</option>
+                    <option>Hidalgo</option>
+                    <option>Jalisco</option>
+                    <option>Estado México</option>
+                    <option>Michoacán</option>
+                    <option>Nayarit</option>
+                    <option>Nuevo León</option>
+                    <option>Oaxaca</option>
+                    <option>Puebla</option>
+                    <option>Querétaro</option>
+                    <option>Quintana Roo</option>
+                    <option>San Luis Potosí</option>
+                    <option>Sinaloa</option>
+                    <option>Sonora</option>
+                    <option>Tabasco</option>
+                    <option>Tamaulipas</option>
+                    <option>Tlaxcala</option>
+                    <option>Veracruz</option>
+                    <option>Yucatán</option>
+                    <option>Zacatecas</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="municipio">Municipio / Ciudad*</label>
+                <input type="text" class="form-control" id="municipio" required>
+            </div>
+            <div class="form-group">
+                <label for="calle">Calle*</label>
+                <input type="text" class="form-control" id="calle" required>
+            </div>
+            <div class="form-group">
+                <label for="numExterior">Numero de casa exterior*</label>
+                <input type="text" class="form-control" id="numExterior" required>
+            </div>
+            <div class="form-group">
+                <label for="numInterior">Numero de casa interior*</label>
+                <input type="text" class="form-control" id="numInterior" required>
+            </div>
+            <div class="form-group">
+                <label for="cp">Código Postal*</label>
+                <input type="text" class="form-control" id="cp" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefonoFijo">Teléfono fijo</label>
+                <input type="text" class="form-control" id="telefonoFijo">
+            </div>
+            <div class="form-group">
+                <label for="telefonoMovil">Teléfono móvil*</label>
+                <input type="text" class="form-control" id="telefonoMovil" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico*</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </section>
+
+    <!--CONTAINER FOOTER-->
+    <footer class="site-footer" id="site-footer">
+        <div class="container-fluid">
+            <div class="row mx-4">
+                <div class="col-12 col-lg-4 col-sm-12">
+                    <h6>Ubicación</h6>
+                    <div class="map-responsive">
+                        <iframe rel="preload"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14929.711412544395!2d-100.42849465!3d20.6928436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d359d148505b49%3A0xcffedc73d636ebb8!2sHospital%20Moscati!5e0!3m2!1ses-419!2smx!4v1653424381032!5m2!1ses-419!2smx"
+                                title="Ubicación HospitalMoscati">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 col-sm-12">
+                    <h6>Acerca de</h6>
+                    <ul class="footer-links">
+                        <li class="footer-item footer-expand">
+                            <a class="footer-link footer-expand-link" href="about.html">
+                                Quiénes somos
+                            </a>
+                        </li>
+                        <li class="footer-item footer-expand">
+                            <a class="footer-link footer-expand-link" href="office-sales.html">
+                                Venta de consultorios
+                            </a>
+                        </li>
+                        <li class="footer-item footer-expand">
+                            <a class="footer-link footer-expand-link" href="others-services.html">
+                                Otros servicios
+                            </a>
+                        </li>
+                        <li class="footer-item footer-expand">
+                            <a class="footer-link footer-expand-link" href="questions.html">
+                                Preguntas frecuentes
+                            </a>
+                        </li>
+                        <li class="footer-item footer-expand">
+                            <a class="footer-link footer-expand-link" href="advice-privacy.html">
+                                Aviso de privacidad
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-5 col-sm-12">
+                    <h6>Contáctanos</h6>
+                    <ul class="footer-links">
+                        <li class="footer-item footer-expand">
+                            <a class="footer-link footer-expand-link" href="tel:4421893660">
+                                Informes: 442-189-3660
+                            </a>
+                        </li>
+                        <li class="footer-item footer-expand">
+                            <a class="footer-link footer-expand-link" href="tel:4421893660">
+                                Urgencias: 442-189-3663
+                            </a>
+                        </li>
+                        <li class="footer-item footer-expand">
+                            <a class="footer-link footer-expand-link" href="mailto:informes@hospitalmoscati.com">
+                                informes@hospitalmoscati.com
+                            </a>
+                        </li>
+                        <li class="footer-item footer-expand">
+                            <a class="footer-link footer-expand-link" href="https://g.page/Moscatiqro?share">
+                                Boulevard de las Ciencias. 2058, Querétaro, Qro.
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mx-4">
+        </div>
+        <div class="container-fluid">
+            <div class="row mx-4">
+                <div class="col-12 col-md-8 col-sm-12 d-flex text-center justify-content-start align-items-center footer-links justify-content-center justify-content-md-start justify-content-sm-center">
+                    <p class="copyright-text ">Hospital Moscati 2022&copy; Todos los Derechos Reservados.
+                        <a href="#">TI Moscati</a>
+                    </p>
+                </div>
+                <div class="col-12 col-md-4 col-sm-12 d-flex justify-content-end align-items-center justify-content-center justify-content-md-end justify-content-sm-center">
+                    <ul class="social-icons">
+                        <li>
+                            <a class="facebook" href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="twitter" href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="instagram" href="#">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="youtube" href="#">
+                                <i class="fa fa-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--END CONTAINER FOOTER-->
+
+    <script async src="assets/js/jquery-3.6.0.min.js"></script>
+    <script async src="assets/js/bootstrap.bundle.min.js"></script>
+    <script async src="https://kit.fontawesome.com/2ba8359609.js" crossorigin="anonymous"></script>
+    <script async type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>

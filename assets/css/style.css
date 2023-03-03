@@ -80,8 +80,8 @@
     /*END OPACITY*/
 
     /*FONTS*/
-    --hmq-primary-font: Futura, "Trebuchet MS", Arial, sans-serif;
-    --hmq-secondary-font: 'Kumbh Sans', sans-serif;
+    --hmq-primary-font: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --hmq-secondary-font: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     /*END FONTS*/
 
     /*TEXT WEIGHT*/
@@ -143,7 +143,6 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--hmq-secondary-font);
     line-height: var(--hmq-line-height-15);
     font-weight: var(--hmq-weight-500);
-    letter-spacing: .25rem;
     text-align: center;
 }
 p {
@@ -151,7 +150,6 @@ p {
     color: var(--hmq-gray-500);
     font-weight: var(--hmq-weight-500);
     font-family: var(--hmq-secondary-font);
-    letter-spacing: .25rem;
     text-align: justify;
     font-size: 1.6rem;
     line-height: 2;
@@ -171,7 +169,6 @@ a {
     text-align: center;
     display: inline-block;
     border-radius: 1.25rem;
-    letter-spacing: .325rem;
     padding: var(--hmq-break-1) var(--hmq-break-15);
     font-weight: var(--hmq-weight-500);
     text-decoration: none;
@@ -414,7 +411,6 @@ a {
     color: var(--hmq-blue-4);
     display: block;
     line-height: 2;
-    letter-spacing: .325rem;
     font-weight: var(--hmq-weight-300);
 }
 .hmq-offcanvas-nav:hover {
@@ -431,7 +427,7 @@ a {
     padding: calc(4 * var(--hmq-break-1)) calc(2 * var(--hmq-break-1));
 }
 .hmq-carousel-image-1 {
-    background: url("../image/carousel/registro.jpg") center center;
+    background: url("../image/carousel/hmq-common-area-main.jpeg") center center;
     background-size: cover;
 }
 .hmq-carousel-image-2 {
@@ -443,7 +439,7 @@ a {
     background-size: cover;
 }
 .hmq-carousel-main-image-1 {
-    background-image: linear-gradient(rgba(0, 0, 0, var(--hmq-opacity-60)), rgba(0, 0, 0, var(--hmq-opacity-60))), url("../image/carousel/registro.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, var(--hmq-opacity-60)), rgba(0, 0, 0, var(--hmq-opacity-60))), url("../image/carousel/hmq-common-area-main.jpeg");
     background-position: center center;
     background-size: cover;
 }
@@ -482,6 +478,10 @@ a {
 .hmq-carousel-btn a {
     color: var(--hmq-white);
     background-color: var(--hmq-blue);
+    transition: box-shadow .5s ease-in-out;
+}
+.hmq-carousel-btn a:hover {
+    box-shadow: inset 25rem 0 0 0 var(--hmq-blue-1);
 }
 @media (min-width: 576px) {
 
@@ -572,27 +572,26 @@ a {
 /*PROMOTIONS*/
 .hmq-promo-container {
     background-color: var(--hmq-blue);
-    padding: calc(1 * var(--hmq-break-15)) var(--hmq-break-1);
+    padding: var(--hmq-break-15) var(--hmq-break-1);
 }
 .hmq-promo-text h2 {
     margin:var(--hmq-break-none);
     color: var(--hmq-white);
     font-size: 2.2rem;
-    letter-spacing: .5rem;
 }
-.hmq-promo-btn a {
+.hmq-promo-text a {
+    text-decoration: none;
     color: var(--hmq-white);
-    background-color: var(--hmq-red-5);
 }
 @media (min-width: 576px) {
 
 }
 @media (min-width: 768px) {
     .hmq-promo-container {
-        padding: calc(2 * var(--hmq-break-15)) var(--hmq-break-1);
+        padding: calc(2 * var(--hmq-break-1));
     }
     .hmq-promo-text h2 {
-        font-size: 3rem;
+        font-size: 4.4rem;
     }
 }
 @media (min-width: 992px) {
@@ -625,7 +624,6 @@ a {
     margin: var(--hmq-break-none);
     color: var(--hmq-blue-4);
     font-size: 2rem;
-    letter-spacing: .375rem;
 }
 .hmq-moscati-txt p {
     margin: var(--hmq-break-15) var(--hmq-break-none);
@@ -647,7 +645,6 @@ a {
     }
     .hmq-moscati-title h1 {
         font-size: 4.4rem;
-        letter-spacing: .75rem;
     }
     .hmq-moscati-slogan h3 {
         font-size: 2.4rem;
@@ -662,9 +659,6 @@ a {
 @media (min-width: 992px) {
     .hmq-moscati-container {
         padding: calc(1 * var(--hmq-break-1));
-    }
-    .hmq-moscati-title h1 {
-        letter-spacing: .25rem;
     }
 }
 @media (min-width: 1200px) {
@@ -839,12 +833,13 @@ a {
 }
 /*END CONTAINER SERVICES*/
 
+/*CONTAINER OPINIONS*/
 .hmq-opinions-grid {
     margin: var(--hmq-break-none) auto;
     padding: var(--hmq-break-none) var(--hmq-break-none) calc(2 * var(--hmq-break-15)) var(--hmq-break-none);
     max-width: 110rem;
     display: grid;
-    grid-gap: 1.5rem;
+    grid-gap: 1.2rem;
     justify-items: center;
 }
 .hmq-opinion-icon {
@@ -867,7 +862,7 @@ a {
     padding: var(--hmq-break-1);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
     height: 40rem;
     width: 35rem;
     border-radius: 5%;
@@ -877,21 +872,20 @@ a {
 .hmq-box-shadow-opinions:hover {
     box-shadow: 0 0 1.75rem 0 var(--hmq-blue-1);
 }
+.hmq-opinion-detail-title {
+
+}
 .hmq-opinion-detail-title h4 {
     margin: var(--hmq-break-none);
     color: var(--hmq-blue-4);
     font-size: 3rem;
 }
 .hmq-opinion-detail-txt {
-    margin: auto;
+    margin-top: calc(3 * var(--hmq-break-1));
 }
 .hmq-opinion-detail-txt p {
-    margin: auto;
     line-height: 1.5;
-    padding: var(--hmq-break-1) var(--hmq-break-1) calc(2 * var(--hmq-break-15)) var(--hmq-break-1);
-}
-.hmq-carousel-option-indicators {
-    margin: -.37rem 0;
+    padding: var(--hmq-break-none) var(--hmq-break-1);
 }
 .hmq-carousel-option-indicators [data-bs-target] {
     width: 1rem;
@@ -901,7 +895,6 @@ a {
     border-radius: 50%;
     background-color: var(--hmq-blue);
 }
-
 @media (min-width: 576px) {
 
 }
@@ -924,6 +917,42 @@ a {
 @media (min-width: 1400px) {
 
 }
+/*END CONTAINER OPINIONS*/
+
+/*CONTAINER IMAGE GALLERY*/
+.hmq-grid-image-gallery {
+    max-width: 110rem;
+    margin: var(--hmq-break-15) auto;
+    display: grid;
+    grid-gap: .5rem;
+}
+.hmq-image-gallery {
+    padding: .5rem;
+}
+.hmq-image-gallery img {
+    width: 100%;
+    border-radius: .75rem;
+}
+@media (min-width: 576px) {
+
+}
+@media (min-width: 768px) {
+    .hmq-grid-image-gallery  {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 992px) {
+    .hmq-grid-image-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width: 1200px) {
+
+}
+@media (min-width: 1400px) {
+
+}
+/*END CONTAINER IMAGE GALLERY*/
 
 .hmq-service-pills {
     margin: calc(.5 * var(--hmq-break-5)) var(--hmq-break-none);
@@ -974,7 +1003,6 @@ a {
     font-weight: var(--hmq-weight-500);
     text-align: justify;
     font-size: 1.6rem;
-    letter-spacing: .25rem;
     line-height: 2;
 }
 .hmq-service-tap-pane-list {
@@ -982,7 +1010,6 @@ a {
     font-weight: var(--hmq-weight-500);
     text-align: justify;
     font-size: 1.6rem;
-    letter-spacing: .25rem;
     line-height: 2;
     list-style: circle;
     padding: var(--hmq-break-none) calc(2 * var(--hmq-break-1)) var(--hmq-break-none) calc(3 * var(--hmq-break-1));
@@ -1020,7 +1047,6 @@ a {
     .hmq-service-pills-label label {
         display: block;
         text-align: center;
-        letter-spacing: .25rem;
         font-size: 1.6rem;
         font-weight: var(--hmq-weight-500);
     }
@@ -1079,7 +1105,6 @@ a {
     line-height: 2;
     font-size: 1.6rem;
     list-style: circle;
-    letter-spacing: .25rem;
 }
 .hmq-default-grid-photos {
     max-width: 160rem;
@@ -1135,13 +1160,13 @@ a {
 .site-footer h6 {
     margin: var(--hmq-break-1) 0 var(--hmq-break-1) 0;
     padding-bottom: .5rem;
-    letter-spacing: .5rem;
     color: var(--hmq-white);
-    font-size: 1.6rem;
+    font-size: 2.4rem;
     font-weight: var(--hmq-weight-700);
     text-transform: uppercase;
     border-bottom: .2rem solid var(--hmq-white);
     font-family: var(--hmq-secondary-font);
+    text-align: start;
 }
 .site-footer a {
     color: var(--hmq-white);
@@ -1157,14 +1182,12 @@ a {
     color: var(--hmq-white);
     font-weight: var(--hmq-weight-500);
     font-size: 1.4rem;
-    letter-spacing: .0875rem;
     font-family: var(--hmq-secondary-font);
 }
 .footer-links a:active,
 .footer-links a:focus,
 .footer-links a:hover {
     padding-left: .525rem;
-    letter-spacing: .075rem;
     color: var(--hmq-yellow-1);
     text-decoration: none;
     transition: .5s;
@@ -1173,7 +1196,6 @@ a {
     margin: .875rem 0;
     padding: 0 .5rem;
     font-size: 1.4rem;
-    letter-spacing: .0875rem;
     color: var(--hmq-white);
 }
 .footer-link {
