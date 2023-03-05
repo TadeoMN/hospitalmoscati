@@ -91,130 +91,215 @@
     </header>
     <!--END CONTAINER NAVBAR-->
 
-    <section class="container my-5">
-        <form>
-            <div class="form-group">
-                <label for="firstName">Apellido paterno*</label>
-                <input type="text" class="form-control" id="firstName" required>
+    <section class="container my-3" style="max-width: 90rem">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="hmq-registration-title">Preregistro</h2>
             </div>
-            <div class="form-group">
-                <label for="lastName">Apellido materno</label>
-                <input type="text" class="form-control" id="lastName">
-            </div>
-            <div class="form-group">
-                <label for="name">Nombre*</label>
-                <input type="text" class="form-control" id="name" required>
-            </div>
-            <div class="form-group">
-                <label for="identificationType">Tipo de identificación*</label>
-                <select class="form-control" id="identificationType" required>
-                    <option>INE</option>
-                    <option>Pasaporte</option>
-                    <option>Licencia de conducir</option>
-                    <option>Cartilla militar</option>
-                    <option>CURP</option>
-                    <option>Credencial escolar</option>
-                    <option>Cédula profesional</option>
-                    <option>INAPAM</option>
-                    <option>Documento migratorio</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="gender">Género*</label>
-                <select class="form-control" id="gender" required>
-                    <option>Masculino</option>
-                    <option>Femenino</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="birthdate">Fecha de nacimiento*</label>
-                <input type="date" class="form-control" id="birthdate" required>
-            </div>
-            <div class="form-group">
-                <label for="bloodType">Tipo de sangre*</label>
-                <select class="form-control" id="bloodType" required>
-                    <option>N/A</option>
-                    <option>A+</option>
-                    <option>B+</option>
-                    <option>AB+</option>
-                    <option>O+</option>
-                    <option>A-</option>
-                    <option>B-</option>
-                    <option>AB-</option>
-                    <option>O-</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="estado">Estado*</label>
-                <select class="form-control" id="estado" required>
-                    <option>Aguascalientes</option>
-                    <option>Baja California Norte</option>
-                    <option>Baja California Sur</option>
-                    <option>Campeche</option>
-                    <option>Chiapas</option>
-                    <option>Chihuahua</option>
-                    <option>Ciudad de México</option>
-                    <option>Coahuila</option>
-                    <option>Colima</option>
-                    <option>Durango</option>
-                    <option>Opción 10</option>
-                    <option>Guanajuato</option>
-                    <option>Guerrero</option>
-                    <option>Hidalgo</option>
-                    <option>Jalisco</option>
-                    <option>Estado México</option>
-                    <option>Michoacán</option>
-                    <option>Nayarit</option>
-                    <option>Nuevo León</option>
-                    <option>Oaxaca</option>
-                    <option>Puebla</option>
-                    <option>Querétaro</option>
-                    <option>Quintana Roo</option>
-                    <option>San Luis Potosí</option>
-                    <option>Sinaloa</option>
-                    <option>Sonora</option>
-                    <option>Tabasco</option>
-                    <option>Tamaulipas</option>
-                    <option>Tlaxcala</option>
-                    <option>Veracruz</option>
-                    <option>Yucatán</option>
-                    <option>Zacatecas</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="municipio">Municipio / Ciudad*</label>
-                <input type="text" class="form-control" id="municipio" required>
-            </div>
-            <div class="form-group">
-                <label for="calle">Calle*</label>
-                <input type="text" class="form-control" id="calle" required>
-            </div>
-            <div class="form-group">
-                <label for="numExterior">Numero de casa exterior*</label>
-                <input type="text" class="form-control" id="numExterior" required>
-            </div>
-            <div class="form-group">
-                <label for="numInterior">Numero de casa interior*</label>
-                <input type="text" class="form-control" id="numInterior" required>
-            </div>
-            <div class="form-group">
-                <label for="cp">Código Postal*</label>
-                <input type="text" class="form-control" id="cp" required>
+        </div>
+        <form action="form.php" method="post">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="hmq-registration-subtitle">Datos personales</h3>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="form-group hmq-registration-group">
+                        <label for="lastName">Apellido paterno <span class="hmq-registration-required">*</span></label>
+                        <input type="text" class="form-control" id="lastName" required placeholder="Apellido del paciente" name="lastName">
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="form-group hmq-registration-group">
+                        <label for="surName">Apellido materno</label>
+                        <input type="text" class="form-control" id="surName" placeholder="Apellido del paciente" name="surName">
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="form-group hmq-registration-group">
+                        <label for="firstName">Nombre <span class="hmq-registration-required">*</span></label>
+                        <input type="text" class="form-control" id="firstName" required placeholder="Nombre del paciente" name="firstName">
+                    </div>
+                </div>
+
+                <div class="col-10 pe-0">
+                    <div class="form-group hmq-registration-group">
+                        <label for="nameComplete">Nombre completo <span class="hmq-registration-required">*</span></label>
+                        <input type="text" class="form-control" id="nameComplete" required disabled placeholder="Presiona el botón" name="nameComplete">
+                    </div>
+                </div>
+                <div class="col-2 ps-0 d-flex justify-content-center align-items-center flex-column">
+                    <div class="input-group hmq-registration-group">
+                        <label for="hmq-registration-button" class="hmq-registration-button-label">nombre completo</label>
+                        <button type="button" class="btn btn-outline-secondary w-100" id="hmq-registration-button" onclick="fullName()">Rellenar</button>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group hmq-registration-group">
+                        <label for="birthdate">Fecha de nacimiento <span class="hmq-registration-required">*</span></label>
+                        <input type="date" class="form-control" id="birthdate" required name="birthdate">
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="form-group hmq-registration-group">
+                        <label for="gender">Género <span class="hmq-registration-required">*</span></label>
+                        <select class="form-control" id="gender" required name="gender">
+                            <option value="Masculino">Masculino</option>
+                            <option value="Femenino">Femenino</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="form-group hmq-registration-group">
+                        <label for="bloodType">Tipo de sangre <span class="hmq-registration-required">*</span></label>
+                        <select class="form-control" id="bloodType" required name="bloodType">
+                            <option value="Desconocido">Desconocido</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group hmq-registration-group">
+                        <label for="identificationType">Tipo de identificación <span class="hmq-registration-required">*</span></label>
+                        <select class="form-control" id="identificationType" required name="identificationType">
+                            <option value="INE">INE</option>
+                            <option value="Pasaporte">Pasaporte</option>
+                            <option value="Licencia de conducir">Licencia de conducir</option>
+                            <option value="Cartilla militar">Cartilla militar</option>
+                            <option value="CURP">CURP</option>
+                            <option value="Credencial escolar">Credencial escolar</option>
+                            <option value="Cédula profesional">Cédula profesional</option>
+                            <option value="INAPAM">INAPAM</option>
+                            <option value="Documento migratorio">Documento migratorio</option>
+                        </select>
+                    </div>
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="telefonoFijo">Teléfono fijo</label>
-                <input type="text" class="form-control" id="telefonoFijo">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="hmq-registration-subtitle">Dirección</h3>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group hmq-registration-group">
+                        <label for="calle">Calle <span class="hmq-registration-required">*</span></label>
+                        <input type="text" class="form-control" id="calle" required name="street">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group hmq-registration-group">
+                        <label for="municipio">Municipio / Ciudad <span class="hmq-registration-required">*</span></label>
+                        <input type="text" class="form-control" id="municipio" required name="municipality">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group hmq-registration-group">
+                        <label for="state">Estado <span class="hmq-registration-required">*</span></label>
+                        <select class="form-control" id="state" required name="state">
+                            <option value="">Selecciona un estado</option>
+                            <option value="Aguascalientes">Aguascalientes</option>
+                            <option value="Baja California">Baja California</option>
+                            <option value="Baja California Sur">Baja California Sur</option>
+                            <option value="Campeche">Campeche</option>
+                            <option value="Coahuila">Coahuila</option>
+                            <option value="Colima">Colima</option>
+                            <option value="Chiapas">Chiapas</option>
+                            <option value="Chihuahua">Chihuahua</option>
+                            <option value="Ciudad de México">Ciudad de México</option>
+                            <option value="Durango">Durango</option>
+                            <option value="Guanajuato">Guanajuato</option>
+                            <option value="Guerrero">Guerrero</option>
+                            <option value="Hidalgo">Hidalgo</option>
+                            <option value="Jalisco">Jalisco</option>
+                            <option value="Estado de México">Estado de México</option>
+                            <option value="Michoacán">Michoacán</option>
+                            <option value="Morelos">Morelos</option>
+                            <option value="Nayarit">Nayarit</option>
+                            <option value="Nuevo León">Nuevo León</option>
+                            <option value="Oaxaca">Oaxaca</option>
+                            <option value="Puebla">Puebla</option>
+                            <option value="Querétaro">Querétaro</option>
+                            <option value="Quintana Roo">Quintana Roo</option>
+                            <option value="San Luis Potosí">San Luis Potosí</option>
+                            <option value="Sinaloa">Sinaloa</option>
+                            <option value="Sonora">Sonora</option>
+                            <option value="Tabasco">Tabasco</option>
+                            <option value="Tamaulipas">Tamaulipas</option>
+                            <option value="Tlaxcala">Tlaxcala</option>
+                            <option value="Veracruz">Veracruz</option>
+                            <option value="Yucatán">Yucatán</option>
+                            <option value="Zacatecas">Zacatecas</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group hmq-registration-group">
+                        <label for="numExterior">Numero de casa exterior <span class="hmq-registration-required">*</span></label>
+                        <input type="text" class="form-control" id="numExterior" required name="numExt">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group hmq-registration-group">
+                        <label for="numInterior">Numero de casa interior</label>
+                        <input type="text" class="form-control" id="numInterior" name="numInt">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group hmq-registration-group">
+                        <label for="cp">Código Postal <span class="hmq-registration-required">*</span></label>
+                        <input type="text" class="form-control" id="cp" required name="cp">
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="telefonoMovil">Teléfono móvil*</label>
-                <input type="text" class="form-control" id="telefonoMovil" required>
+
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="hmq-registration-subtitle">Datos de contacto</h3>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group hmq-registration-group">
+                        <label for="email">Correo electrónico <span class="hmq-registration-required">*</span></label>
+                        <input type="email" class="form-control" id="email" required name="email">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group hmq-registration-group">
+                        <label for="numberCel">Numero de celular <span class="hmq-registration-required">*</span></label>
+                        <input type="text" class="form-control" id="numberCel" required name="numCel">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group hmq-registration-group">
+                        <label for="numberTel">Numero de teléfono</label>
+                        <input type="text" class="form-control" id="numberTel" name="numTel">
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="email">Correo electrónico*</label>
-                <input type="email" class="form-control" id="email" required>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
             </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
     </section>
 

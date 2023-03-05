@@ -14,3 +14,11 @@ $(document).ready(function () {
         swap();
     });
 });
+
+function fullName() {
+    const lastName = document.getElementById('lastName').value;
+    const surName = document.getElementById('surName').value;
+    const firstName = document.getElementById('firstName').value;
+
+    document.getElementById('nameComplete').value = `${lastName} ${surName} ${firstName}`.toUpperCase();
+}

@@ -1,89 +1,50 @@
 <?php
-    if(isset($_POST['submit'])){
-        $firstName = $_POST['firstName'];
-        $lastName = $_POST['lastName'];
-        $name = $_POST['name'];
-        $identificationType = $_POST['identificationType'];
-        $gender = $_POST['gender'];
-        $birthdate = $_POST['birthdate'];
-        $bloodType = $_POST['bloodType'];
-        $estado = $_POST['estado'];
-        $municipio = $_POST['municipio'];
-        $calle = $_POST['calle'];
+// Comprobar si se ha enviado el formulario
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-        $to = "ejemplo@correo.com";
-        $subject = "Formulario de contacto";
-
-        $message = "
-        <html>
-    <head>
-        <title>Formulario de contacto</title>
-    </head>
-    <body>
-    <p>Información enviada desde el formulario:</p>
-    <table>
-        <tr>
-            <th>Apellido paterno</th>
-            <th>Apellido materno</th>
-            <th>Nombre</th>
-            <th>Tipo de identificación</th>
-            <th>Género</th>
-            <th>Fecha de nacimiento</th>
-            <th>Tipo de sangre</th>
-            <th>Estado</th>
-            <th>Municipio / Ciudad</th>
-            <th>Calle</th>
-        </tr>
-        <tr>
-            <td>$firstName</td>
-            <td>$lastName</td>
-            <td>$name</td>
-            <td>$identificationType</td>
-            <td>$gender</td>
-            <td>$birthdate</td>
-            <td>$bloodType</td>
-            <td>$estado</td>
-            <td>$municipio</td>
-            <td>$calle</td>
-        </tr>
-    </table>
-    </body>
-</html>
-";
-
-// Always set content-type when sending HTML email
-        $headers = "MIME-Version: 1.0" . "\r\n";
-        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-
-        mail($to,$subject,$message,$headers);
-        echo "El correo ha sido enviado correctamente.";
-    }
-?>
-
-<?php
-
-if(isset($_POST['submit'])){
-    $firstName = $_POST['firstName'];
+    // Obtener los valores del formulario
     $lastName = $_POST['lastName'];
-    $name = $_POST['name'];
-    $identificationType = $_POST['identificationType'];
-    $gender = $_POST['gender'];
+    $surName = $_POST['surName'];
+    $firstName = $_POST['firstName'];
+    $nameComplete = $_POST['nameComplete'];
     $birthdate = $_POST['birthdate'];
+    $gender = $_POST['gender'];
     $bloodType = $_POST['bloodType'];
-    $telefonoFijo = $_POST['telefonoFijo'];
-    $telefonoMovil = $_POST['telefonoMovil'];
+    $identificationType = $_POST['identificationType'];
+    $street = $_POST['street'];
+    $municipality = $_POST['municipality'];
+    $state = $_POST['state'];
+    $numExt = $_POST['numExt'];
+    $numInt = $_POST['numInt'];
+    $cp = $_POST['cp'];
     $email = $_POST['email'];
+    $numCel = $_POST['numCel'];
+    $numTel = $_POST['numTel'];
 
-    $to = 'correo@ejemplo.com';
-    $subject = 'Nueva solicitud de formulario';
-    $message = "Apellido paterno: " . $firstName . "\n" . "Apellido materno: " . $lastName . "\n" . "Nombre: " . $name . "\n" . "Tipo de identificación: " . $identificationType . "\n" . "Género: " . $gender . "\n" . "Fecha de nacimiento: " . $birthdate . "\n" . "Tipo de sangre: " . $bloodType . "\n" . "Teléfono fijo: " . $telefonoFijo . "\n" . "Teléfono móvil: " . $telefonoMovil . "\n" . "Correo electrónico: " . $email;
-    $headers = "De: " . $email;
+    // Configurar los detalles del correo electrónico
+    $to = 'tadeo.mejia@hospitalmoscati.com';
+    $subject = 'Información del formulario';
+    $message = "Apellido paterno: $lastName\n"
+        . "Apellido materno: $surName\n"
+        . "Nombre: $firstName\n"
+        . "Nombre completo: $nameComplete\n"
+        . "Fecha de nacimiento: $birthdate\n"
+        . "Género: $gender\n"
+        . "Tipo de sangre: $bloodType\n"
+        . "Tipo de identificación: $identificationType\n"
+        . "Calle: $street\n"
+        . "Municipio / Ciudad: $municipality\n";
+    $headers = 'From: '. $email . "\r\n" .
+        'Reply-To: ejemplo@dominio.com' . "\r\n" .
+        'X-Mailer: PHP/' . phpversion();
 
-    if(mail($to, $subject, $message, $headers)){
-        echo 'Enviado';
+    // Enviar el correo electrónico
+    if (mail($to, $subject, $message, $headers)) {
+        echo 'El formulario se ha enviado correctamente.';
     } else {
-        echo 'Error al enviar';
+        echo 'Error al enviar el formulario.';
     }
-}
 
-?>
+} else {
+    echo 'Error: El formulario no ha sido enviado.';
+}
