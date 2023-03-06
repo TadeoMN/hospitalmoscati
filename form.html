@@ -91,13 +91,16 @@
     </header>
     <!--END CONTAINER NAVBAR-->
 
-    <section class="container my-3" style="max-width: 90rem">
+    <section class="container">
         <div class="row">
             <div class="col-12">
-                <h2 class="hmq-registration-title">Preregistro</h2>
+                <h2 class="hmq-registration-title">Pre-registro</h2>
             </div>
         </div>
-        <form action="form.php" method="post">
+    </section>
+
+    <section class="container my-3" style="max-width: 105rem; border: .1rem solid gray; border-radius: 1.5rem">
+        <form action="form.php" method="post" style="padding: .5rem 1.5rem 2rem 1.5rem;">
             <div class="row">
                 <div class="col-12">
                     <h3 class="hmq-registration-subtitle">Datos personales</h3>
@@ -126,7 +129,7 @@
                 <div class="col-10 pe-0">
                     <div class="form-group hmq-registration-group">
                         <label for="nameComplete">Nombre completo <span class="hmq-registration-required">*</span></label>
-                        <input type="text" class="form-control" id="nameComplete" required disabled placeholder="Presiona el botón" name="nameComplete">
+                        <input type="text" class="form-control" id="nameComplete" required disabled placeholder="Presiona el botón de rellenar" name="nameComplete">
                     </div>
                 </div>
                 <div class="col-2 ps-0 d-flex justify-content-center align-items-center flex-column">
@@ -195,14 +198,14 @@
                 <div class="col-md-6">
                     <div class="form-group hmq-registration-group">
                         <label for="calle">Calle <span class="hmq-registration-required">*</span></label>
-                        <input type="text" class="form-control" id="calle" required name="street">
+                        <input type="text" class="form-control" id="calle" required placeholder="Calle" name="street">
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <div class="form-group hmq-registration-group">
                         <label for="municipio">Municipio / Ciudad <span class="hmq-registration-required">*</span></label>
-                        <input type="text" class="form-control" id="municipio" required name="municipality">
+                        <input type="text" class="form-control" id="municipio" required placeholder="Municipio" name="municipality">
                     </div>
                 </div>
 
@@ -249,21 +252,21 @@
                 <div class="col-md-3">
                     <div class="form-group hmq-registration-group">
                         <label for="numExterior">Numero de casa exterior <span class="hmq-registration-required">*</span></label>
-                        <input type="text" class="form-control" id="numExterior" required name="numExt">
+                        <input type="text" class="form-control" id="numExterior" required placeholder="Numero exterior" name="numExt">
                     </div>
                 </div>
 
                 <div class="col-md-3">
                     <div class="form-group hmq-registration-group">
                         <label for="numInterior">Numero de casa interior</label>
-                        <input type="text" class="form-control" id="numInterior" name="numInt">
+                        <input type="text" class="form-control" id="numInterior" required placeholder="Numero interior" name="numInt">
                     </div>
                 </div>
 
                 <div class="col-md-3">
                     <div class="form-group hmq-registration-group">
                         <label for="cp">Código Postal <span class="hmq-registration-required">*</span></label>
-                        <input type="text" class="form-control" id="cp" required name="cp">
+                        <input type="text" class="form-control" id="cp" required placeholder="Código postal" name="cp">
                     </div>
                 </div>
             </div>
@@ -276,28 +279,28 @@
                 <div class="col-md-6">
                     <div class="form-group hmq-registration-group">
                         <label for="email">Correo electrónico <span class="hmq-registration-required">*</span></label>
-                        <input type="email" class="form-control" id="email" required name="email">
+                        <input type="email" class="form-control" id="email" required placeholder="Tu correo electrónico" name="email">
                     </div>
                 </div>
 
                 <div class="col-md-3">
                     <div class="form-group hmq-registration-group">
                         <label for="numberCel">Numero de celular <span class="hmq-registration-required">*</span></label>
-                        <input type="text" class="form-control" id="numberCel" required name="numCel">
+                        <input type="text" class="form-control" id="numberCel" required placeholder="Tu numero de celular" name="numCel">
                     </div>
                 </div>
 
                 <div class="col-md-3">
                     <div class="form-group hmq-registration-group">
                         <label for="numberTel">Numero de teléfono</label>
-                        <input type="text" class="form-control" id="numberTel" name="numTel">
+                        <input type="text" class="form-control" id="numberTel" placeholder="Tu numero de teléfono fijo" name="numTel">
                     </div>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-md-12">
-                    <button type="submit" class="btn btn-primary">Enviar</button>
+                <div class="col-md-12 d-flex justify-content-end">
+                    <button type="submit" class="btn btn-primary hmq-registration-button-submit">Enviar</button>
                 </div>
             </div>
         </form>
