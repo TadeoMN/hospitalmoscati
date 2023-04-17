@@ -1399,9 +1399,20 @@ a {
     font-size: 1.6rem;
 }
 .hmq-registration-group .hmq-registration-button-label {
-    color: var(--hmq-white);
+    color: transparent;
 }
 .hmq-registration-group button {
     margin: .5rem 0;
     font-size: 1.6rem;
+}
+.hmq-registration-button-submit {
+    min-width: 20rem;
+    line-height: 1.5;
+    font-size: 1.6rem;
+    text-align: center;
+    display: inline-block;
+    border-radius: 1.25rem;
+    padding: var(--hmq-break-1) var(--hmq-break-15);
+    font-weight: var(--hmq-weight-500);
+    text-decoration: none;
 }

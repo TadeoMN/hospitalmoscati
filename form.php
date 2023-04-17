@@ -6,7 +6,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $lastName = $_POST['lastName'];
     $surName = $_POST['surName'];
     $firstName = $_POST['firstName'];
-    $nameComplete = $_POST['nameComplete'];
     $birthdate = $_POST['birthdate'];
     $gender = $_POST['gender'];
     $bloodType = $_POST['bloodType'];
@@ -27,7 +26,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = "Apellido paterno: $lastName\n"
         . "Apellido materno: $surName\n"
         . "Nombre: $firstName\n"
-        . "Nombre completo: $nameComplete\n"
         . "Fecha de nacimiento: $birthdate\n"
         . "Género: $gender\n"
         . "Tipo de sangre: $bloodType\n"
@@ -40,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Enviar el correo electrónico
     if (mail($to, $subject, $message, $headers)) {
-        echo 'El formulario se ha enviado correctamente.';
+        header('Location: index..html');
     } else {
         echo 'Error al enviar el formulario.';
     }
